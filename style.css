@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #536dfe;
+  --secondary: #1f2937;
+}
+
+body {
+  background: #f3f4f6;
+  color: var(--secondary);
+}
+/* ------ CONTAINER ------- */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  margin: 0 auto;
+
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ------------- IMAGE SECTION ------------- */
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container img {
+  max-width: 40vw;
+}
+
+/* -------- LOGIN SECTION ---------- */
+.login-container {
+  display: flex;
+  margin: 2rem;
+  padding: 2rem;
+  border-radius: 15px;
+
+  background-color: #fff;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container h1 {
+  font-size: 3rem;
+  padding: 1rem;
+}
+
+.input-container {
+  margin: 1rem;
+}
+
+.input-container input {
+  height: 2rem;
+  min-width: 300px;
+
+  border: none;
+  border-bottom: 1px solid var(--secondary);
+  
+  font-size: 1.1rem;
+  background-color: transparent;
+  transition: all 0.3s ease-in;
+}
+
+.input-container input:focus {
+  border: none;
+  box-shadow: 0 0 0;
+  border-bottom: 2px solid var(--primary);
+
+  transition: all 0.3s ease-in;
+  transform: translateY(3px);
+}
+
+.input-container input:invalid {
+  border: none;
+  box-shadow: 0 0 0;
+  border-bottom: 2px solid #ef4444;
+
+  transition: all 0.3s ease-in;
+}
+
+.forgot-pass {
+  font-size: 0.8rem;
+  text-decoration: none;
+
+  color: var(--primary);
+  
+  margin-left: auto;
+  margin-bottom: 1rem;
+}
+
+.forgot-pass:hover {
+    color: blue;
+}
+
+.btn {
+  background-color: var(--primary);
+  color: #fff;
+
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+
+  font-size: 1rem;
+  font-family: "Montserrat";
+  
+  transition: all 0.3s linear;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .input-container input {
+    min-width: 250px;
+  }
+}
